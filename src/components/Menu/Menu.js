@@ -15,7 +15,7 @@ class Menu extends Component {
                 onMouseLeave={this.props.handleMouseLeave}
                 className={visibility}>
                 <h2 className="sobre-texto"><Link to="/sobre" href="#">Sobre mim</Link></h2>
-                <h2><a href="#">Experiência</a></h2>
+                <h2 className=""><a href="#">Experiência</a></h2>
                 <h2><a href="#">Hobbies</a></h2>
                 <h2><a href="#">Formação</a></h2>
             </div>

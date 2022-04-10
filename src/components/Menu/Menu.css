@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  transition: transform 1s
+  transition: transform .3s
               cubic-bezier(0, .52, 0, 1);
   overflow: scroll;
   z-index: 1000;
@@ -21,11 +21,10 @@
 }
  
 #flyoutMenu h2{
-    margin-bottom: 5vh;
-    padding: 10px 0;
+    padding: 7px 0;
 }
 .sobre-texto{
-    margin-top: 30vh
+    margin-top: 29vh
 }
 #flyoutMenu h2 a {
   color: #333;

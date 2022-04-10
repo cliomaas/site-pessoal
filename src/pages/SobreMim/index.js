@@ -1,16 +1,24 @@
 import MenuContainer from "../../components/Menu/MenuContainer";
 import './index.css'
 import SobreMimDescricao from "./SobreMimDescricao";
-function SobreMim(...props) {
+import React, { Component } from "react";
+class SobreMim extends Component {
+    constructor(props) {
+        super(props);
 
-    return (
-        <>
-            <MenuContainer />
-            <SobreMimDescricao />
+        this.state = {
+            pink: true
+        };
+    }
+    render() {
+        return (
+            <>
+                <MenuContainer setPink={this.state.pink} />
+                <SobreMimDescricao />
 
-        </>
-    );
+            </>
+        );
+    }
 }
-
 
 export default SobreMim;

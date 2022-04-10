@@ -9,7 +9,7 @@ class MenuContainer extends Component {
         super(props);
 
         this.state = {
-            visible: false
+            visible: false,
         };
 
 
@@ -20,10 +20,10 @@ class MenuContainer extends Component {
 
     handleMouseLeave(e) {
         this.setState({
-            visible: false
+            visible: false,
         });
 
-        console.log("clicked");
+        console.log("left");
         e.stopPropagation();
     }
 
@@ -39,10 +39,15 @@ class MenuContainer extends Component {
             visible: !this.state.visible
         });
     }
+
     render() {
+        var pink = false;
+        if (this.props.setPink) {
+            var pink = true;
+        }
         return (
             <>
-                <MenuClosed handleMouseDown={this.handleMouseDown} />
+                <MenuClosed handleMouseDown={this.handleMouseDown} pink={pink} />
                 <Menu handleMouseLeave={this.handleMouseLeave}
                     menuVisibility={this.state.visible} />
             </>
