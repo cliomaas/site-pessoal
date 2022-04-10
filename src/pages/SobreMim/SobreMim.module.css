@@ -1,0 +1,36 @@
+
+.content{
+    display: flex;
+    justify-content: center;
+    margin: 0 50vh;
+}
+
+.avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar h1{
+    font-size: 4rem;
+}
+
+.description{
+    composes:avatar;
+
+}
+
+.quemTitle{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.quemTitle hr{
+    border-width: 2px 0 0 0;
+    border-color: white;
+    width: 50%;
+}

@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-
+import styles from "./SobreMim.module.css"
 
 class SobreMimDescricao extends Component {
     render() {
         return (
-            <div>
-                <div>
-                    <div>
-                        <h1>Jane Doe.</h1>
+            <div className={styles.container}>
+                <div className={styles.content}>
+                    <div className={styles.avatar}>
+                        <h1>Jane <span style={{ color: '#EA4B7B' }}> Doe.</span></h1>
                         <img src='./images/imagem-perfil.png' />
                     </div>
-                    <div>
+                    <div className={styles.description}>
                         <div>
                             <h1>Sobre mim</h1>
-                            <div>
+                            <div className={styles.quemTitle}>
                                 <hr />
                                 <p>Quem sou eu</p>
                             </div>
