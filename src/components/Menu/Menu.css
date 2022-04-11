@@ -39,3 +39,9 @@
 #flyoutMenu h2:hover > a{
   color: white;
 }
+
+@media screen and (max-width: 600px){
+  #flyoutMenu{
+    width: 65vw;
+  }
+}

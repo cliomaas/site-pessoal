@@ -12,11 +12,11 @@ class SobreMim extends Component {
     }
     render() {
         return (
-            <>
+            <div className="parent">
                 <MenuContainer setPink={this.state.pink} />
                 <SobreMimDescricao />
 
-            </>
+            </div>
         );
     }
 }

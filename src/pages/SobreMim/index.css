@@ -1,3 +1,7 @@
+#root{
+    min-height: 100vh;
+}
+
 body{
     background-color: #2C2D32;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -5,4 +9,10 @@ body{
 
 h1{
     color: white;
+}
+
+.parent{
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
 }

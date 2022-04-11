@@ -1,8 +1,12 @@
+.parent{
+    position: relative;
+}
 
 .content{
     display: flex;
     justify-content: center;
-    margin: 0 50vh;
+    flex-wrap: wrap;
+    /* margin: 0 50vh; */
 }
 
 .avatar{
@@ -20,6 +24,12 @@
 
 }
 
+.descriptionText{
+    font-size: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0 50px;
+    color: white;
+}
 .quemTitle{
     display: flex;
     justify-content: center;
@@ -27,10 +37,16 @@
     flex-direction: row;
     align-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 .quemTitle hr{
     border-width: 2px 0 0 0;
     border-color: white;
     width: 50%;
+    margin: 0;
+}
+
+.quemTitle p{
+    color: #EA4B7B;
 }

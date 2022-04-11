@@ -18,7 +18,7 @@ class SobreMimDescricao extends Component {
                                 <p>Quem sou eu</p>
                             </div>
                         </div>
-                        <p>Aliquam ac felis quam. Donec commodo mi vel ante placerat rutrum.
+                        <p className={styles.descriptionText}>Aliquam ac felis quam. Donec commodo mi vel ante placerat rutrum.
                             Cras pharetra sagittis ullamcorper. Nulla egestas pulvinar eros,
                             ullamcorper sagittis Aliquam ac felis quam. Donec commodo mi vel ante placerat rutrum.
                             Cras pharetra sagittis ullamcorper. Nulla egestas pulvinar eros, ullamcorper sagittis Aliquam ac felis quam.

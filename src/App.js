@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MenuContainer from './components/Menu/MenuContainer';
 import SobreMim from './pages/SobreMim';
-
+import './index.css'
 
 function App() {
   return (
