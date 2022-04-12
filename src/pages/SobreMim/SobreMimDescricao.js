@@ -18,15 +18,14 @@ class SobreMimDescricao extends Component {
                                 <p>Quem sou eu</p>
                             </div>
                         </div>
-                        <p className={styles.descriptionText}>Aliquam ac felis quam. Donec commodo mi vel ante placerat rutrum.
-                            Cras pharetra sagittis ullamcorper. Nulla egestas pulvinar eros,
-                            ullamcorper sagittis Aliquam ac felis quam. Donec commodo mi vel ante placerat rutrum.
-                            Cras pharetra sagittis ullamcorper. Nulla egestas pulvinar eros, ullamcorper sagittis Aliquam ac felis quam.
-                            Donec commodo mi vel ante placerat rutrum. Cras pharetra sagittis ullamcorper.
-                            Nulla egestas pulvinar eros, ullamcorper sagittis </p>
-                        <div>
-                            <button>Meu curriculo</button>
-                            <button>Me contrate!</button>
+                        <p className={styles.descriptionText}>Aliquam ac felis quam.Donec commodo mi vel ante placerat rutrum.
+                            Cras pharetra sagittis ullamcorper.Nulla egestas pulvinar eros, ullamcorper sagittis Aliquam ac felis quam.
+                            Donec commodo mi vel ante placerat rutrum.Cras pharetra sagittis ullamcorper.Nulla egestas pulvinar eros,
+                            ullamcorper sagittis Aliquam ac felis quam.Donec commodo mi vel ante placerat rutrum.Cras pharetra sagittis ullamcorper.
+                            Nulla egestas pulvinar eros, ullamcorper sagittis  </p>
+                        <div className={styles.buttonsDiv}>
+                            <button className={styles.buttonPrimary}>Meu curriculo</button>
+                            <button className={styles.buttonSecundary}>Me contrate!</button>
                         </div>
                     </div>
                 </div>

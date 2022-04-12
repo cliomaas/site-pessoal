@@ -8,3 +8,6 @@ body {
 #root li {
   margin-bottom: 10px;
 }
+#root{
+    min-height: 100vh;
+}
