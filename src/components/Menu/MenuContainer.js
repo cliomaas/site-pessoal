@@ -41,9 +41,15 @@ class MenuContainer extends Component {
     }
 
     render() {
-        var pink = false;
-        if (this.props.setPink) {
-            var pink = true;
+        var pink = " ";
+        if (this.props.setPink === "sobre") {
+            var pink = "sobre";
+        } else if (this.props.setPink === "experiencia") {
+            var pink = "experiencia"
+        } else if (this.props.setPink === "hobbies") {
+            var pink = "hobbies"
+        } else if (this.props.setPink === "formacao") {
+            var pink = "formacao"
         }
         return (
             <>

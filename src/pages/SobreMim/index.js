@@ -1,14 +1,14 @@
 import MenuContainer from "../../components/Menu/MenuContainer";
 import './index.css'
-import SobreMimDescricao from "./SobreMimDescricao";
+import SobreMimDescricao from "../../components/SobreMim/SobreMimDescricao";
 import React, { Component } from "react";
-import SobreMimContatos from "./SobreMimContatos";
+import SobreMimContatos from "../../components/SobreMim/SobreMimContatos";
 class SobreMim extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            pink: true
+            pink: "sobre"
         };
     }
     render() {

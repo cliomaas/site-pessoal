@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #595959;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  height: 20vh;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #595959;
+  border: 4px solid #EA4B7B;
+  top: 20vh;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  composes: container;
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  composes:container;
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+}
+
+.contentRight{
+    composes: content;
+    
+}
+
+.contentLeft{
+    composes:content;
+    flex-direction: row-reverse;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+.timeline{
+    height: 100%;
+}  
+.timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    height: 75vh;
+  }
+
+
+  .left::after, .right::after {
+    left: 2vh;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+
+  .container::after {
+      top: 35vh;
+  }
+
+  .contentLeft{
+      flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+.timeline{
+    height: 100vh;
+}  
+.timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    height: 30vh;
+  }
+
+
+  .left::after, .right::after {
+    left: 2vh;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+
+  .container::after {
+      top: 11vh;
+  }
+
+  .contentLeft{
+      flex-direction: row;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+
+.timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    height: 120vh;
+  }
+
+
+  .left::after, .right::after {
+    left: 2vh;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+
+  .container::after {
+      top: 60vh;
+  }
+
+  .contentLeft{
+      flex-direction: row;
+  }
+
+}

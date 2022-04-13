@@ -2,12 +2,12 @@ import { Component } from "react";
 import Timeline from "../../components/Formacao/Timeline";
 import MenuContainer from "../../components/Menu/MenuContainer";
 
-class Formacao extends Component {
+class Hobbies extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            pink: "formacao"
+            pink: "hobbies"
         };
     }
     render() {
@@ -21,4 +21,4 @@ class Formacao extends Component {
     }
 }
 
-export default Formacao;
+export default Hobbies;

@@ -7,19 +7,31 @@ import { ReactComponent as Graduation } from "../../images/icons/la_graduation-c
 
 class MenuClosed extends Component {
     render() {
-        var pink = "";
+        var pinkSobre = "";
+        var pinkExp = "";
+        var pinkHob = "";
+        var pinkFor = "";
 
-        if (this.props.pink) {
-            pink = "pink";
+        if (this.props.pink === "sobre") {
+            pinkSobre = " pink";
+        }
+        else if (this.props.pink === "experiencia") {
+            pinkExp = " pink"
+        }
+        else if (this.props.pink === "hobbies") {
+            pinkHob = " pink"
+        }
+        else if (this.props.pink === "formacao") {
+            pinkFor = " pink"
         }
 
         return (
             <div id="closedMenu"
                 onMouseDown={this.props.handleMouseDown}>
-                <BiPerson className={"icon sobre " + pink} />
-                <ClarityStar className="icon experiencia" />
-                <BeachAccess className="icon hobbies" />
-                <Graduation className="icon formacao" />
+                <BiPerson className={"icon sobre" + pinkSobre} />
+                <ClarityStar className={"icon experiencia" + pinkExp} />
+                <BeachAccess className={"icon hobbies" + pinkHob} />
+                <Graduation className={"icon formacao" + pinkFor} />
             </div>
         );
     }
