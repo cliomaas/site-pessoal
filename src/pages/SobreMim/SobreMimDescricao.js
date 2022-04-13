@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import styles from "./SobreMim.module.css"
 
 class SobreMimDescricao extends Component {
+
     render() {
         return (
-            <div className={styles.container}>
+            <div >
                 <div className={styles.content}>
                     <div className={styles.avatar}>
                         <h1>Jane <span style={{ color: '#EA4B7B' }}> Doe.</span></h1>

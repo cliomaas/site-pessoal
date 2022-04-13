@@ -33,6 +33,32 @@
     margin: 0 70px;
     color: white;
 }
+
+.descriptionCep{
+    composes:descriptionText;
+    transform: translateY(-50%);
+    width: 50px;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    margin:0;
+}
+
+.animTypewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 100%;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
 .quemTitle{
     display: flex;
     justify-content: center;
@@ -41,8 +67,14 @@
     align-content: center;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
-
+.cepContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+}
 .quemTitle hr{
     border-width: 2px 0 0 0;
     border-color: white;
@@ -81,12 +113,30 @@
     margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.hiddenComponent{
+    visibility: hidden;
+}
+
+.shownComponent{
+    visibility:visible;
+}
+
 @media screen and (max-width: 600px){
-    .description{
+    .description, .avatar{
         max-width: 70vw;
     }
     .buttonPrimary{
         margin: 10px 0;
+    }
+    .descriptionText{
+        margin: 0;
     }
 }
