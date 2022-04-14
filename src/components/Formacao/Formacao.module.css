@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -10,7 +9,6 @@
   height: 100vh;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -22,7 +20,6 @@
   margin-left: -3px;
 }
 
-/* Container around content */
 .container {
   padding: 10px 40px;
   position: relative;
@@ -31,7 +28,6 @@
   height: 20vh;
 }
 
-/* The circles on the timeline */
 .container::after {
   content: '';
   position: absolute;
@@ -45,24 +41,20 @@
   z-index: 1;
 }
 
-/* Place the container to the left */
 .left {
   composes: container;
   left: 0;
 }
 
-/* Place the container to the right */
 .right {
   composes:container;
   left: 50%;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
   left: -16px;
 }
 
-/* The actual content */
 .content {
   padding: 20px 30px;
   position: relative;
@@ -78,12 +70,15 @@
     
 }
 
+.contentRight h1, .contentLeft h1{
+  margin-right: 1vw;
+}
+
 .contentLeft{
     composes:content;
     flex-direction: row-reverse;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 .timeline{
     height: 100%;
@@ -92,7 +87,6 @@
     left: 31px;
   }
 
-/* Full-width containers */
   .container {
     width: 100%;
     padding-left: 70px;
@@ -105,7 +99,6 @@
     left: 2vh;
   }
 
-/* Make all right containers behave like the left ones */
   .right {
     left: 0%;
   }
@@ -127,7 +120,6 @@
     left: 31px;
   }
 
-/* Full-width containers */
   .container {
     width: 100%;
     padding-left: 70px;
@@ -140,7 +132,6 @@
     left: 2vh;
   }
 
-/* Make all right containers behave like the left ones */
   .right {
     left: 0%;
   }
@@ -161,7 +152,6 @@
     left: 31px;
   }
 
-/* Full-width containers */
   .container {
     width: 100%;
     padding-left: 70px;
@@ -174,7 +164,6 @@
     left: 2vh;
   }
 
-/* Make all right containers behave like the left ones */
   .right {
     left: 0%;
   }

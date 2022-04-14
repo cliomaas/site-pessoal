@@ -1,4 +1,4 @@
-import MenuContainer from "../../components/Menu/MenuContainer";
+import MenuContainer from "../../components/MenuLateral/MenuContainer";
 import './index.css'
 import SobreMimDescricao from "../../components/SobreMim/SobreMimDescricao";
 import React, { Component } from "react";

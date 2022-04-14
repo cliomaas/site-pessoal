@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ExperienciaCard from "../../components/Experiencia/ExperienciaCard";
-import MenuContainer from "../../components/Menu/MenuContainer";
+import MenuContainer from "../../components/MenuLateral/MenuContainer";
 import styles from '../../components/Experiencia/Experiencia.module.css'
 import Title from "../../components/Title/Title";
 
