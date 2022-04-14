@@ -1,0 +1,56 @@
+.wrapper{
+    margin-right: 50px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    margin: 1vw;
+}
+
+.text{
+    color: white;
+    background-color: rgba(89, 89, 89, 0.49);
+    text-align: center;
+    padding: 1vw;
+    padding-left: 6vw;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: start;
+}
+
+.text p{
+    font-size: 16px;
+}
+
+.year{
+    position: relative;
+    right: -47px;
+    text-align: end;
+}
+.year h1{
+    font-size: 3rem;
+    color: #595959;
+    margin: 0;
+}
+.year p{
+    margin: 0;
+    color: white;
+}
+.cardContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width:600px) {
+    .content{
+        width: 100vw;
+    }    
+    .wrapper{
+        max-width: 90vw;
+    }
+    .year{
+        position: unset;
+    }
+}

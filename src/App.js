@@ -4,6 +4,8 @@ import SobreMim from './pages/SobreMim';
 import './index.css'
 import Formacao from './pages/Formação';
 import Hobbies from './pages/Hobbies';
+import Experiencia from './pages/Experiência';
+import Inicial from './pages/Inicial';
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
         <Route element={<SobreMim />} path="/sobre" />
         <Route element={<Formacao />} path="/formacao" />
         <Route element={<Hobbies />} path="/hobbies" />
-        <Route element={<MenuContainer />} path="/" exact />
+        <Route element={<Experiencia />} path="/experiencia" />
+        <Route element={<Inicial />} path="/" exact />
       </Routes>
     </BrowserRouter>
   );

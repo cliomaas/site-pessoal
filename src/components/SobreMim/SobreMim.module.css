@@ -139,4 +139,7 @@
     .descriptionText{
         margin: 0;
     }
+    .cepContent{
+        max-width: 65%;
+    }
 }

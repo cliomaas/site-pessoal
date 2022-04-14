@@ -4,9 +4,9 @@ class Timeline extends Component {
     render() {
         return (
             <>
-                <div class={styles.timeline}>
-                    <div class={styles.left}>
-                        <div class={styles.contentLeft}>
+                <div className={styles.timeline}>
+                    <div className={styles.left}>
+                        <div className={styles.contentLeft}>
                             <h1>2017</h1>
                             <div>
                                 <h2>Lorem Ipsum
@@ -20,8 +20,8 @@ class Timeline extends Component {
                             </div>
                         </div>
                     </div>
-                    <div class={styles.right}>
-                        <div class={styles.contentRight}>
+                    <div className={styles.right}>
+                        <div className={styles.contentRight}>
                             <h1>2017</h1>
                             <div>
                                 <h2>Lorem Ipsum
@@ -35,8 +35,8 @@ class Timeline extends Component {
                             </div>
                         </div>
                     </div>
-                    <div class={styles.left}>
-                        <div class={styles.contentLeft}>
+                    <div className={styles.left}>
+                        <div className={styles.contentLeft}>
                             <h1>2017</h1>
                             <div>
                                 <h2>Lorem Ipsum
