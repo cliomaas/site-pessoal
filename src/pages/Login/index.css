@@ -1,0 +1,25 @@
+.botao-login{
+    background-color: transparent;
+    border: rgb(234, 75, 123) solid 1px;
+    color: white;
+    padding: 2vw;
+    font-weight: lighter;
+    font-size: 27px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    cursor: pointer;
+    min-width: 30vw;
+    margin-bottom: 10vh;
+}
+
+.botao-login:hover, .botao-login:active{
+    background-color: rgb(234, 75, 123);
+}
+
+.container-buttons{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30vw;
+}

@@ -1,60 +1,83 @@
 import axios from "axios";
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./SobreMim.module.css"
+import { useUser } from "../../hooks/useUser";
 
 
-class SobreMimContatos extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            active: false,
-            persons: []
-        };
+export function SobreMimContatos({ id }) {
+    const getNewUser = JSON.parse(localStorage.getItem("usuario"))
+    const [cep, setCep] = useState([]);
+    const [active, setActive] = useState(false)
+    const userCep = getNewUser.cep
 
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick() {
-        const currentState = this.state.active;
-        this.setState({ active: !currentState });
-    }
-    componentDidMount() {
-        let cep = document.getElementById('cep').innerHTML.replace(/[^\d]+/g, '')
-        console.log(cep)
-        axios.get('https://viacep.com.br/ws/' + cep + '/json/')
+    useEffect(() => {
+        axios.get('https://viacep.com.br/ws/' + userCep + '/json/')
             .then(res => {
-                const persons = res.data;
-                console.log(res.data)
-                this.setState({ persons });
-                console.log(this.state.persons)
+                const endereco = res.data;
+                setCep(endereco)
+                console.log(cep)
             })
+    }, []);
+
+
+    function handleClick() {
+        const currentState = active;
+        setActive(!currentState);
     }
-    render() {
-        return (
-            <div className={styles.container}>
-                <div className={styles.content}>
-                    <div className={styles.description}>
-                        <div>
-                            <h1>Contato</h1>
-                            <div className={styles.quemTitle}>
-                                <hr />
-                                <p>Endereço</p>
-                            </div>
+
+
+    return (
+        <div className={styles.container}>
+            <div className={styles.content}>
+                <div className={styles.description}>
+                    <div>
+                        <h1>Contato</h1>
+                        <div className={styles.quemTitle}>
+                            <hr />
+                            <p>Endereço</p>
                         </div>
-                        <div className={styles.cepContent}>
-                            <p className={`${styles.descriptionCep} ${styles.animTypewriter}`} id="cep">Meu cep: 01423-010</p>
-                            <button className={styles.buttonSecundary} onClick={this.handleClick}>Exibir endereço completo</button>
-                            <div className={this.state.active ? styles.shownComponent : styles.hiddenComponent}>
-                                <p style={{ margin: '20px 0px' }} className={styles.descriptionText}>{this.state.persons.logradouro}, n° 1000, {this.state.persons.bairro}. {this.state.persons.localidade}, {this.state.persons.uf} </p>
-                            </div>
+                    </div>
+                    <div className={styles.cepContent}>
+                        <p className={`${styles.descriptionCep} ${styles.animTypewriter}`} id="cep">Meu cep: {getNewUser.cep}</p>
+                        <button className={styles.buttonSecundary} onClick={handleClick}>Exibir endereço completo</button>
+                        <div className={active == true ? styles.shownComponent : styles.hiddenComponent}>
+                            <p style={{ margin: '20px 0px' }} className={styles.descriptionText}>{cep.logradouro}, {getNewUser.numero}, {cep.bairro}, {cep.localidade}, {cep.uf}</p>
                         </div>
                     </div>
                 </div>
             </div>
-        );
-    }
-
-
+        </div>
+    );
 }
+
+// class SobreMimContatos extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             active: false,
+//             persons: []
+//         };
+
+//         this.handleClick = this.handleClick.bind(this)
+//     }
+
+
+//     componentDidMount() {
+//         let cep = document.getElementById('cep').innerHTML.replace(/[^\d]+/g, '')
+//         console.log(cep)
+//         axios.get('https://viacep.com.br/ws/' + cep + '/json/')
+//             .then(res => {
+//                 const persons = res.data;
+//                 console.log(res.data)
+//                 this.setState({ persons });
+//                 console.log(this.state.persons)
+//             })
+//     }
+//     render() {
+
+//     }
+
+
+// }
 
 export default SobreMimContatos;

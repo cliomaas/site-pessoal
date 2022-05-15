@@ -19,9 +19,6 @@ class Experiencia extends Component {
                 <MenuContainer setPink={this.state.pink} />
                 <div className={styles.cardContent}>
                     <ExperienciaCard />
-                    <ExperienciaCard />
-                    <ExperienciaCard />
-                    <ExperienciaCard />
                 </div>
             </div>
         )

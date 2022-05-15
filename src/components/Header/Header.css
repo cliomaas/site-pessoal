@@ -1,0 +1,28 @@
+.header{
+    background-color: black;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    padding: 10px;
+}
+
+.search{
+    background: url('../../images/icons/Search.png') no-repeat 7px 7px;
+    padding-left: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border-width: 0;
+    height:fit-content;
+    width: 30%;
+    padding: 10px;
+    padding-left: 31px;
+}
+
+@media screen and (max-width: 700px){
+
+.search{
+    width: 50%;
+}
+}
