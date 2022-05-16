@@ -33,9 +33,9 @@ export default function CadastroDadosPessoais() {
             cep: yup.string().matches(/[0-9]{8}/),
             numero: yup.number().required(),
             empresas: yup.string().required(),
-            data: yup.string().matches(/[0-9]{4}/),
+            data: yup.string().matches(/[0-9]{4}/).min(4).max(4),
             faculdade: yup.string().required(),
-            anoCurso: yup.string().matches(/[0-9]{4}/),
+            anoCurso: yup.string().matches(/[0-9]{4}/).min(4).max(4),
             hobby: yup.string().required()
         }),
         onSubmit: (values) => {

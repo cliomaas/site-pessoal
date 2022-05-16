@@ -12,7 +12,7 @@ export function SobreMimDescricao() {
             <div className={styles.content}>
                 <div className={styles.avatar}>
                     <h1 className={styles.nome}>{getNewUser.nome} <span style={{ color: '#EA4B7B' }}> {getNewUser.sobrenome}</span></h1>
-                    <img src={imagem} className={styles.imgAvatar} />
+                    <img src={imagem} className={styles.imgAvatar} alt="imagem de perfil" />
                 </div>
                 <div className={styles.description}>
                     <div>

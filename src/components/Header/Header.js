@@ -13,8 +13,10 @@ export default function Header() {
     }
     const handleSubmit = () => {
         const input = document.getElementById("search")
-        console.log(input)
-        if (input.value.includes(getNewUser.nome)) {
+        const value = input.value.toLowerCase();
+        const userLower = getNewUser.nome.toLowerCase();
+        console.log(value)
+        if (value.includes(userLower)) {
             navigate('/sobre')
         } else {
             alert("Usuário não encontrado")
