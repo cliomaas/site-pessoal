@@ -28,6 +28,17 @@
 
 }
 
+.nome{
+    text-transform: capitalize;
+}
+
+.imgAvatar{
+object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
 .descriptionText{
     font-size: 1rem;
     font-family: 'IBM Plex Mono', monospace;
