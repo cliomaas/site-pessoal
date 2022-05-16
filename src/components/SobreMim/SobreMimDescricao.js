@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { useUser } from "../../hooks/useUser";
 import styles from "./SobreMim.module.css"
 
-export function SobreMimDescricao({ id }) {
+export function SobreMimDescricao() {
     const getNewUser = JSON.parse(localStorage.getItem("usuario"))
-
+    const imagem = getNewUser.imagem
 
     console.log(getNewUser.nome)
     return (
@@ -12,7 +12,7 @@ export function SobreMimDescricao({ id }) {
             <div className={styles.content}>
                 <div className={styles.avatar}>
                     <h1>{getNewUser.nome} <span style={{ color: '#EA4B7B' }}> {getNewUser.sobrenome}</span></h1>
-                    <img src='./images/imagem-perfil.png' />
+                    <img src={imagem} />
                 </div>
                 <div className={styles.description}>
                     <div>

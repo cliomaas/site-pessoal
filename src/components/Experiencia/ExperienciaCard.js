@@ -15,8 +15,7 @@ class ExperienciaCard extends Component {
                         {this.getNewUser.empresas}
                     </h3>
                     <p>
-                        Aliquam ac felis quam. Donec commodo mi vel ante placerat rutrum.
-                        Cras pharetra sagittis ullamcorper.
+                        {this.getNewUser.descricaoExperiencia}
                     </p>
                 </div>
             </div>
