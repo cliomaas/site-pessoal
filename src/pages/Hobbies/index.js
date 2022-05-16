@@ -8,6 +8,7 @@ import { default as pencil } from "../../images/icons/lapis.svg";
 import { default as music } from "../../images/icons/nota_musical.svg";
 import { default as star } from "../../images/icons/star.svg";
 import Title from "../../components/Title/Title";
+import Header from "../../components/Header/Header";
 
 class Hobbies extends Component {
     constructor(props) {
@@ -31,13 +32,17 @@ class Hobbies extends Component {
         }
 
         return (
-            <div className={styles.wrapper}>
-                <MenuContainer setPink={this.state.pink} />
-                <Title title={title} subtitle={subtitle} />
-                <div className={styles.container}>
-                    <HobbiesCard icon={getNewUser.hobby.includes("bicicleta") ? bike : getNewUser.hobby.includes("viajar") ? plane : getNewUser.hobby.includes("musica") ? music : star} text={getNewUser.hobby} />
+            <>
+                <Header />
+                <div className={styles.wrapper}>
+
+                    <MenuContainer setPink={this.state.pink} />
+                    <Title title={title} subtitle={subtitle} />
+                    <div className={styles.container}>
+                        <HobbiesCard icon={getNewUser.hobby.includes("bicicleta") ? bike : getNewUser.hobby.includes("viajar") ? plane : getNewUser.hobby.includes("musica") ? music : star} text={getNewUser.hobby} />
+                    </div>
                 </div>
-            </div>
+            </>
 
         );
     }

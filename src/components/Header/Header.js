@@ -21,11 +21,14 @@ export default function Header() {
         }
     }
 
+    const handleClick = () => {
+        navigate('/')
+    }
     return (
         <div className="header">
-            <h1>CV<span style={{ color: "rgb(234, 75, 123)" }}>.</span></h1>
+            <h1 style={{ cursor: "pointer" }} onClick={handleClick}>CV<span style={{ color: "rgb(234, 75, 123)" }}>.</span></h1>
             <input className="search" id="search" onKeyDown={handleKeyDown} type=" text"></input>
-            <div></div>
+            <div style={{ width: "62.05px" }}></div>
         </div>
     )
 }

@@ -136,7 +136,7 @@ export default function CadastroDadosPessoais() {
                     <div className="botaoDiv">
                         <button className="botao-cadastro" type="submit">Submeter</button></div>
                     {formik.errors.nome, formik.errors.numero, formik.errors.empresas, formik.errors.faculdade, formik.errors.hobby && (
-                        <p className="error-message">Não deixe a informação em branco.</p>
+                        <p className="error-message">Não deixe nenhuma informação em branco.</p>
                     )}
                 </form>
             </div>

@@ -9,7 +9,7 @@ class Timeline extends Component {
                     <div className={styles.left}>
                         <div className={styles.contentLeft}>
                             <h1>{this.getNewUser.anoCurso}</h1>
-                            <div>
+                            <div className={styles.description}>
                                 <h2>{this.getNewUser.faculdade}</h2>
                                 <p>
                                     {this.getNewUser.descricaoCurso}
